@@ -120,9 +120,9 @@ namespace Tailf
                                 do
                                 {
                                     nRead = sr.ReadBlock(buffer, 0, bufSize);
-                                    for (int i = 0; i < nRead; ++i)
+                                    for (int i = 0; i <= nRead; ++i)
                                     {
-                                        if (buffer[i] == '\n' || buffer[i] == '\r')
+                                        if (buffer[i] == '\n' || buffer[i] == '\r' || (i == nRead))
                                         {
                                             if (current.Length > 0)
                                             {
